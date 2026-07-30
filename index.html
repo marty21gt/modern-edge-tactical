@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QQQ Tactical — Daily Action</title>
+<title>Modern Edge Tactical™ — Daily Action</title>
 <style>
   :root{--bg:#0f1115;--card:#171a21;--card2:#1e222b;--line:#2a2f3a;--tx:#e7e9ee;--mut:#9aa1ad;--dim:#6b7280;--green:#3ecf8e;--gold:#e0a90b;--red:#e05555;--blue:#4a9de0;}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-  <h1>QQQ Tactical — Daily Action</h1>
+  <h1>Modern Edge Tactical™ — Daily Action</h1>
   <div class="sub" id="asof">loading…</div>
   <div id="staleWarn" style="display:none;background:rgba(224,85,85,.14);border:1px solid rgba(224,85,85,.5);border-radius:10px;padding:12px 16px;margin-top:12px;font-size:13px;color:#e05555;font-weight:600"></div>
   <div class="card action" id="actionCard"><div class="lbl" id="targetLbl">target</div><div class="big" id="bigAction">—</div><div class="lev" id="levLine"></div></div>
@@ -283,7 +283,7 @@ function build(D){
   const curHeld=(Math.abs(rawNext-prevHeld)>CONFIG.band)?rawNext:prevHeld;
   const changed=Math.abs(curHeld-prevHeld)>1e-9;
   document.getElementById('targetLbl').textContent=nextTradingDay(dates[i])+" target";
-  document.getElementById('asof').textContent="as of close "+dates[i]+"  ·  QQQ/QLD tactical  (tv "+CONFIG.tv+", cap "+CONFIG.cap+", daily-T gate)";
+  document.getElementById('asof').textContent="as of close "+dates[i]+"  ·  QQQ/QLD tactical  ";
   const a=alloc(curHeld),ac=document.getElementById('actionCard');
   document.getElementById('bigAction').textContent="HOLD "+a.txt;
   document.getElementById('levLine').textContent=curHeld===0?"out of the market":("effective exposure "+curHeld.toFixed(2)+"x");
